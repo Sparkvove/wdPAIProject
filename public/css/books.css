@@ -1,0 +1,36 @@
+.books {
+    display: grid;
+    grid-template-columns: repeat(3,15em);
+    grid-gap: 4em;
+    padding: 2em;
+    overflow: auto;
+}
+
+.books>div>img{
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1em 1em 0 0;
+    
+}
+
+.books>div>div {
+    height: 50%;
+    color: #6B4F4F;
+    margin: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.books>div {
+    border-radius: 1em 1em 0 0;
+    height: 400px;
+    background-color: #FFF3E4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
