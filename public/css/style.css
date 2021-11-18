@@ -4,6 +4,23 @@ body{
     margin: 0;
     
 }
+/* START OF SECTION OF COMPONENTS USED MULTIPLE TIMES */
+/*  USING HEADER IN HEADER.CSS ACROSS REST OF THE VIEWS*/
+
+/*  STYLE OF SPLITTER USED ACROSS REST OF THE VIEWS*/
+.splitter, .Full-size-spliter {
+    border-bottom: 1px solid #6B4F4F;
+    justify-content: center;
+    display: flex;
+    font-size: 1.3em;
+    color: #6B4F4F;
+
+}
+.Full-size-spliter{
+    width: 100vw;
+}
+
+/* END OF SECTION OF COMPONENTS USED MULTIPLE TIMES */
 
 /* START OF LOGIN PAGE STYLE */
 .container {
@@ -72,6 +89,8 @@ input{
 }
 /* END OF LOGIN PAGE STYLE */
 
+
+
 /* START OF DASHBOARD PAGE STYLE */
 
 .base-container{
@@ -82,70 +101,13 @@ input{
 
 }
 
-/*  START OF HEADER */
-.main-header{
-    height: 15vh;
-    width: 100vw;
-    border-bottom: 1px solid #6B4F4F;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.wrapper{
-    width: 60vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-
-}
-
-.nav-logo{
-    margin: 0;
-    width: 20%;
-
-}
-
-.nav-logo > img {
-    height: 120%;
-
-}
-
-.navigation-bar{
-
-    height: 15vh;
-    width: 40vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navigation-bar >div {
-    font-size: 1.5em;
-    color: #6B4F4F;
-    margin: 0.3em;
-}
-
-.navigation-bar > div> p {
-    margin: 0.2em;
-    color: #6B4F4F;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #6B4F4F;
-
-}
-
-.search, .browse, .list, .settings{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-/*  END OF HEADER */
-
-
 /*  START OF MAIN CONTENT */
+/*  USING BOOKS.CSS HERE TO DISPLAY GRID OF ITEMS */
+
+
 /*  END OF MAIN CONTENT */
 
 /* END OF DASHBOARD PAGE STYLE */
+
+/* START OF SEARCH PAGE */
+
