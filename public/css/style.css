@@ -191,3 +191,49 @@ option{
     border-radius: 25px;
     border-color: #6B4F4F;
 }
+
+/* END OF SEARCH PAGE STYLE */
+
+/* START OF BOOK INFO PAGE */
+
+.book-info-bg{
+    height: 45vh;
+    background: transparent linear-gradient(180deg, #EED6C4 0%, #6B4F4FD4 100%) 0% 0% no-repeat padding-box;
+    width: 100vw;
+    margin-bottom: 5vh;
+}
+
+.Book-Info{
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+.Book-Cover{
+    height: 30vh;
+    width: 15vw;
+}
+
+.Book-Cover>img{
+    height: 100%;
+    width: 100%;
+    border-radius: 1em 1em 1em 1em;
+}
+
+.text-white{
+    color: white;
+}
+.Book-info-fg{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+.Book-Stats{
+    display: flex;
+    flex-direction: row;
+}
+
+.Book-Stats>p{
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
