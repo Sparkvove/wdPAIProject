@@ -237,3 +237,14 @@ option{
     margin-right: 0.5vw;
     margin-left: 0.5vw;
 }
+
+
+section.addbook-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.addbook-form>form{
+    display: flex;
+    flex-direction: column;
+}

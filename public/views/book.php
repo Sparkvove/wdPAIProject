@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/header.css">
     <link rel="stylesheet" type="text/css" href="public/css/books.css">
-    <title>List</title>
+    <title>Book</title>
 </head>
 <body>
     <div class ="base-container">
