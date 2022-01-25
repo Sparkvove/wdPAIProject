@@ -2,6 +2,7 @@
 
 require_once 'AppController.php';
 require_once __DIR__.'/../models/Book.php';
+require_once __DIR__.'/../repository/BookRepository.php';
 
 class BookController extends AppController
 {
@@ -11,6 +12,14 @@ class BookController extends AppController
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
     private $messages = [];
+    private $bookRepository;
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->bookRepository = new BookRepository();
+    }
 
     public function addBook()
     {
@@ -21,6 +30,7 @@ class BookController extends AppController
             );
 
             $book = new Book($_POST['title'], $_POST['summary'], $_FILES['file']['name']);
+            $this->bookRepository->addBook($book);
 
             return $this->render('dashboard',['messages' => $this->messages, 'book' => $book]);
         }
