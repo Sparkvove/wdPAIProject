@@ -45,4 +45,21 @@ class BookRepository extends Repository
             ]);
         }
 
+        public function getBooks(): array{
+        $result = [];
+        $stmt = $this->database->connect()->prepare('SELECT * FROM books');
+
+        $stmt->execute();
+        $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($books as $book){
+            $result[] = new Book(
+                $book['title'],
+                $book['description'],
+                $book['image']
+            );
+        }
+
+        return $result;
+        }
 }

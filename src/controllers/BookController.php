@@ -21,6 +21,12 @@ class BookController extends AppController
         $this->bookRepository = new BookRepository();
     }
 
+
+    public function search(){
+        $books = $this->bookRepository->getBooks();
+        $this->render('search', ['books' => $books]);
+    }
+
     public function addBook()
     {
         if($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])){

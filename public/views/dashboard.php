@@ -66,10 +66,10 @@
                </div>
 
                <div id="Eragon">
-                <img src="public/uploads/<?= $book->getImage() ?>">
+                <img src="public/img/uploads/Eragon.png">
                 <div>
-                    <h2><?= $book->getTitle() ?></h2>
-                    <p><?= $book->getSummary() ?></p>
+                    <h2>Title</h2>
+                    <p>description</p>
                     <div class="social-section">
                         <i class="fas fa-heart"> 600 </i>
                     </div>

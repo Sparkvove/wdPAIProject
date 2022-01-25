@@ -17,9 +17,7 @@ class DefaultController extends AppController{
         $this->render('dashboard');
     }
 
-    public function search(){
-        $this->render('search');
-    }
+
 
     public function list(){
         $this->render('list');
@@ -27,6 +25,11 @@ class DefaultController extends AppController{
 
     public function book(){
         $this->render('book');
+    }
+
+    public function register()
+    {
+        $this->render('register');
     }
 
 
