@@ -1,3 +1,11 @@
+<?php
+
+if (!isset($_COOKIE['currentUser']))
+{
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/login");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +27,9 @@
            if ($user->getId()==$_COOKIE['currentUser'] && $isAdmin)
            {
                echo "
-            
-            <button>Add Book</button>";
+            <a href='http://localhost:8080/addBook/{$user->getId()}'>
+            <p>add book</p>
+            </a>";
            }
            ?>
 

@@ -18,9 +18,11 @@ class SecurityController extends AppController
 
         $user = $this->userRepository->getUserByID($id);
         $isAdmin = $this->userRepository->isUserAdmin($_COOKIE['currentUser']);
+
         return $this->render('settings', ['messages' => $this->message,
             'user'=>$user,'isAdmin'=>$isAdmin]);
     }
+
 
     public function logout(){
         $this->userRepository->deleteCookieUser();

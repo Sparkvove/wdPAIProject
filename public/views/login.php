@@ -1,3 +1,11 @@
+<?php
+
+if (isset($_COOKIE['currentUser']))
+{
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/dashboard");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

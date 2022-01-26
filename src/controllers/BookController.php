@@ -62,7 +62,8 @@ class BookController extends AppController
             $book = new Book($_POST['title'], $_POST['summary'], $_FILES['file']['name']);
             $this->bookRepository->addBook($book);
 
-            return $this->render('dashboard',['messages' => $this->messages, 'book' => $book]);
+            return $this->render('dashboard',['messages' => $this->messages,
+                'books' => $this->bookRepository->getBooks()]);
         }
 
         $this->render('add-book');
