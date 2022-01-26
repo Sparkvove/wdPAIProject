@@ -20,6 +20,7 @@ body{
     width: 100vw;
 }
 
+
 /* END OF SECTION OF COMPONENTS USED MULTIPLE TIMES */
 
 /* START OF LOGIN PAGE STYLE */
@@ -237,7 +238,9 @@ option{
     margin-right: 0.5vw;
     margin-left: 0.5vw;
 }
+/* END OF BOOK PAGE STYLE */
 
+/* START OF ADD-BOOK PAGE */
 
 section.addbook-form{
     display: flex;
@@ -249,7 +252,9 @@ section.addbook-form{
     flex-direction: column;
 }
 
+/* END OF ADD-BOOK PAGE STYLE */
 
+/* START OF REGISTER PAGE */
 .register>input{
     border: 1px solid grey;
 }
