@@ -21,10 +21,29 @@ class BookController extends AppController
         $this->bookRepository = new BookRepository();
     }
 
+    public function search()
+    {
 
-    public function search(){
+        $contentType = isset($_SERVER['CONTENT_TYPE']) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+
+        if($contentType === "application/json"){
+            $content = trim(file_get_contents("php://input"));
+            $decoded = json_decode($content, true);
+
+            header('Content-type: application/json');
+            http_response_code(200);
+            echo json_encode($this->bookRepository->getBookByTitle($decoded['search']));
+        }
+
+    }
+
+    public function adv(){
         $books = $this->bookRepository->getBooks();
         $this->render('search', ['books' => $books]);
+    }
+    public function dashboard(){
+        $books = $this->bookRepository->getBooks();
+        $this->render('dashboard', ['books' => $books]);
     }
 
     public function addBook()
@@ -58,6 +77,8 @@ class BookController extends AppController
 
         return true;
     }
+
+
 
 
 }

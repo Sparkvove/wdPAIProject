@@ -16,69 +16,21 @@
            <section class ="splitter">
                Recomended
         </section>
-        
+
            <section class="books">
-               <div id="Eragon">
-                   <img src="public/img/uploads/Eragon.png">
-                   <div>
-                       <h2>Title</h2>
-                       <p>description</p>
-                       <div class="social-section">
-                           <i class="fas fa-heart"> 600 </i>
+               <?php foreach ($books as $book): ?>
+                   <div id="Eragon">
+                       <img src="public/uploads/<?= $book->getImage(); ?>">
+                       <div>
+                           <h2><?= $book->getTitle(); ?></h2>
+                           <p><?= $book->getSummary(); ?></p>
+                           <div class="social-section">
+                               <i class="fas fa-heart"> 600 </i>
+                           </div>
                        </div>
                    </div>
-               </div>
-
-               <div id="Eragon">
-                <img src="public/img/uploads/Eragon.png">
-                <div>
-                    <h2>Title</h2>
-                    <p>description</p>
-                    <div class="social-section">
-                        <i class="fas fa-heart"> 600 </i>
-                    </div>
-                </div>
-            </div>
-
-            <div id="Eragon">
-                <img src="public/img/uploads/Eragon.png">
-                <div>
-                    <h2>Title</h2>
-                    <p>description</p>
-                    <div class="social-section">
-                        <i class="fas fa-heart"> 600 </i>
-                    </div>
-                </div>
-            </div>
-
-            <div id="Eragon">
-                <img src="public/img/uploads/Eragon.png">
-                <div>
-                    <h2>Title</h2>
-                    <p>description</p>
-                    <div class="social-section">
-                        <i class="fas fa-heart"> 600 </i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class ="splitter">
-            Now Popular
-     </section>
-
-     <section class="books">
-     <div id="Eragon">
-        <img src="public/img/uploads/Eragon.png">
-        <div>
-            <h2>Title</h2>
-            <p>description</p>
-            <div class="social-section">
-                <i class="fas fa-heart"> 600 </i>
-            </div>
-        </div>
-    </div>
-</section>
+               <?php endforeach; ?>
+           </section>
 
        </main>
     </div>

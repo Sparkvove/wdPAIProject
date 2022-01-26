@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
     <script src="https://kit.fontawesome.com/104e78d280.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/search.js" defer></script>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/header.css">
     <link rel="stylesheet" type="text/css" href="public/css/books.css">
     <title>Advanced Search</title>
 </head>
-<!--- TO DO: CREATE NON COPY HEADER FUNCTION --->
+
 
 <body>
     <div class ="base-container">
 
         <?php include('header.php')?>
 
-        <form class="form-search" role="search">
+            <section class ="form-search">
             <input type="search" id="query" name="q"
-             placeholder="Searchpublic."
+             placeholder="Search"
              aria-label="Search through site content">
             <button class="button-search"><i class="fa fa-search"></i></button>
-          </form>
+            </section>
 
         <section class="Full-size-spliter">
             Advanced search
@@ -77,16 +78,16 @@
 
             <section class="books">
                 <?php foreach ($books as $book): ?>
-                <div id="Eragon">
-                    <img src="public/uploads/<?= $book->getImage(); ?>">
-                    <div>
-                        <h2><?= $book->getTitle(); ?></h2>
-                        <p><?= $book->getSummary(); ?></p>
-                        <div class="social-section">
-                            <i class="fas fa-heart"> 600 </i>
+                    <div id="Eragon">
+                        <img src="public/uploads/<?= $book->getImage(); ?>">
+                        <div>
+                            <h2><?= $book->getTitle(); ?></h2>
+                            <p><?= $book->getSummary(); ?></p>
+                            <div class="social-section">
+                                <i class="fas fa-heart"> 600 </i>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php endforeach; ?>
             </section>
 
@@ -95,4 +96,20 @@
 
     </div>
 </body>
+
+
+<template id="book-template">
+
+<div id="Eragon">
+    <img src="public/uploads/<?= $book->getImage(); ?>">
+    <div>
+        <h2>title</h2>
+        <p>summary</p>
+        <div class="social-section">
+            <i class="fas fa-heart"> 0</i>
+        </div>
+    </div>
+</div>
+
+</template>
 </html>
