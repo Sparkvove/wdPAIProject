@@ -19,10 +19,12 @@
 
            <section class="books">
                <?php foreach ($books as $book): ?>
-                   <div id="Eragon">
+                   <div id=<?= $book->getId(); ?>>
                        <img src="public/uploads/<?= $book->getImage(); ?>">
                        <div>
+                           <a href="http://localhost:8080/book/<?= $book->getId(); ?>"
                            <h2><?= $book->getTitle(); ?></h2>
+                           </a>
                            <p><?= $book->getSummary(); ?></p>
                            <div class="social-section">
                                <i class="fas fa-heart"> 600 </i>

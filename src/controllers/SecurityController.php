@@ -6,18 +6,33 @@ require_once __DIR__.'/../repository/UserRepository.php';
 
 class SecurityController extends AppController
 {
+    private $userRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->userRepository = new UserRepository();
+    }
+
+    public function settings(){
+        return $this->render('settings');
+    }
+
+    public function logout(){
+        $this->userRepository->deleteCookieUser();
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/login");
+    }
     public function login(){
-        $userRepository = new UserRepository();
 
 
         if(!$this->isPost()){
             return $this->render('login');
         }
 
-
         $email = $_POST["email"];
         $password = $_POST["password"];
-        $user = $userRepository->getUser($email);
+        $user = $this->userRepository->getUser($email);
 
         if(!$user){
             return $this->render('login', ['messages' => ['User not exist']]);
@@ -29,9 +44,7 @@ class SecurityController extends AppController
         if($user->getPassword() !== $password){
             return $this->render('login', ['messages' => ['Wrong password']]);
         }
-
-//        return $this->render('dashboard');
-
+        $this->userRepository->setCookieUser($user->getEmail());
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/dashboard");
     }

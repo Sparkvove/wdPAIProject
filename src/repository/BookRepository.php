@@ -9,7 +9,7 @@ class BookRepository extends Repository
     public function getBook(int $id): ?Book
     {
         $stmt = $this->database->connect()->prepare('
-        SELECT * FROM books WHERE id = :id
+        SELECT * FROM books WHERE id_book = :id
         ');
 
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -25,6 +25,7 @@ class BookRepository extends Repository
             $book['title'],
             $book['description'],
             $book['image']
+
 
         );
     }
@@ -56,7 +57,8 @@ class BookRepository extends Repository
             $result[] = new Book(
                 $book['title'],
                 $book['description'],
-                $book['image']
+                $book['image'],
+                $book['id_book']
             );
         }
 
@@ -75,5 +77,9 @@ class BookRepository extends Repository
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        public function ShowBook(string $title){
+
         }
 }

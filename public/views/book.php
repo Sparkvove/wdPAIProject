@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <script src="https://kit.fontawesome.com/104e78d280.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/header.css">
-    <link rel="stylesheet" type="text/css" href="public/css/books.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/books.css">
     <title>Book</title>
 </head>
 <body>
@@ -16,12 +16,12 @@
            <div class="book-info-bg">
             <div class="Book-info-fg">
                    <div class="Book-Cover">
-                        <img src="public/img/uploads/Eragon.png">
+                       <img src="/public/uploads/<?= $book->getImage(); ?>">
                     </div>
                    <div class="Book-Info-text">
 
                     <p class="text-white">
-                        Book Title
+                        <?= $book->getTitle(); ?>
                         <br>
                         Book Author
                     </p>
@@ -43,7 +43,7 @@
             Summary
         </section>
         <p class="Book-Info">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+            <?= $book->getSummary(); ?>
         </p>
        </main>
 

@@ -6,7 +6,7 @@
 
             <div class="nav-logo">
 
-                <img src="public/img/logo.svg">
+                <img src="/public/img/logo.svg">
 
             </div>
 
@@ -14,7 +14,7 @@
                 <div class="search">
 
                     <i class="fas fa-search" class></i>
-                    <a href="http://localhost:8080/adv" class="header-button">
+                    <a href="http://localhost:8080/search" class="header-button">
                     <p class="navigation-text">search</p>
                     </a>
 
@@ -37,7 +37,8 @@
 
                 <div class="settings">
                     <i class="fas fa-cog"></i>
-                    <a href="http://localhost:8080/adv" class="header-button">
+
+                    <a href="http://localhost:8080/settings" class="header-button">
                     <p class="navigation-text">settings</p>
                     </a>
                 </div>

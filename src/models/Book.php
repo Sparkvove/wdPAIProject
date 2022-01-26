@@ -5,13 +5,15 @@ class Book
     private $title;
     private $summary;
     private $image;
+    private $id;
 
 
-    public function __construct($title, $summary, $image)
+    public function __construct($title, $summary, $image, $id = null)
     {
         $this->title = $title;
         $this->summary = $summary;
         $this->image = $image;
+        $this->id = $id;
     }
 
 
@@ -48,4 +50,18 @@ class Book
     {
         $this->image = $image;
     }
+
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+
 }

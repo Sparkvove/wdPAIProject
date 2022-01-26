@@ -23,14 +23,12 @@ class DefaultController extends AppController{
         $this->render('list');
     }
 
-    public function book(){
-        $this->render('book');
-    }
 
     public function register()
     {
         $this->render('register');
     }
+
 
 
 }

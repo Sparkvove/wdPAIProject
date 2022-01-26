@@ -23,6 +23,10 @@ class BookController extends AppController
 
     public function search()
     {
+        if(!$this->isPost()){
+            $books = $this->bookRepository->getBooks();
+            $this->render('search', ['books' => $books]);
+        }
 
         $contentType = isset($_SERVER['CONTENT_TYPE']) ? trim($_SERVER["CONTENT_TYPE"]) : '';
 
@@ -37,10 +41,11 @@ class BookController extends AppController
 
     }
 
-    public function adv(){
-        $books = $this->bookRepository->getBooks();
-        $this->render('search', ['books' => $books]);
+    public function book($id){
+        $book = $this->bookRepository->getBook($id);
+        $this->render('book', ['book' => $book]);
     }
+
     public function dashboard(){
         $books = $this->bookRepository->getBooks();
         $this->render('dashboard', ['books' => $books]);
