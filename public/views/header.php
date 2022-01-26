@@ -12,24 +12,34 @@
 
             <div class="navigation-bar">
                 <div class="search">
-                    <i class="fas fa-search"></i>
+
+                    <i class="fas fa-search" class></i>
+                    <a href="http://localhost:8080/adv" class="header-button">
                     <p class="navigation-text">search</p>
+                    </a>
+
                 </div>
 
 
                 <div class="browse">
                     <i class="fas fa-th-large"></i>
+                    <a href="http://localhost:8080/dashboard" class="header-button">
                     <p class="navigation-text">browse</p>
+                    </a>
                 </div>
 
                 <div class="list">
                     <i class="fas fa-book"></i>
+                    <a href="http://localhost:8080/list" class="header-button">
                     <p class="navigation-text">list</p>
+                    </a>
                 </div>
 
                 <div class="settings">
                     <i class="fas fa-cog"></i>
+                    <a href="http://localhost:8080/adv" class="header-button">
                     <p class="navigation-text">settings</p>
+                    </a>
                 </div>
 
             </div>

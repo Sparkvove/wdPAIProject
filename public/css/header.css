@@ -56,3 +56,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.header-button:visited{
+    margin: 0.2em;
+    color: #6B4F4F;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #6B4F4F;
+    text-underline: none;
+}
