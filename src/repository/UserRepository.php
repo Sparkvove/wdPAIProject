@@ -6,6 +6,19 @@ require_once __DIR__.'/../models/User.php';
 class UserRepository extends Repository
 {
 
+    public function addUser(User $user)
+    {
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO users (name, email, password)
+            VALUES (?, ?, ?)
+        ');
+
+        $stmt->execute([
+            $user->getName(),
+            $user->getEmail(),
+            $user->getPassword(),
+        ]);
+    }
     public function getUser(string $email): ?User{
         $stmt = $this->database->connect()->prepare('
         SELECT * FROM public.users WHERE email = :email
