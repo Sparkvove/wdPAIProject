@@ -14,8 +14,12 @@ class SecurityController extends AppController
         $this->userRepository = new UserRepository();
     }
 
-    public function settings(){
-        return $this->render('settings');
+    public function settings(int $id){
+
+        $user = $this->userRepository->getUserByID($id);
+        $isAdmin = $this->userRepository->isUserAdmin($_COOKIE['currentUser']);
+        return $this->render('settings', ['messages' => $this->message,
+            'user'=>$user,'isAdmin'=>$isAdmin]);
     }
 
     public function logout(){

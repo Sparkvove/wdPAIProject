@@ -38,7 +38,7 @@
                 <div class="settings">
                     <i class="fas fa-cog"></i>
 
-                    <a href="http://localhost:8080/settings" class="header-button">
+                    <a href="http://localhost:8080/settings/<?= $_COOKIE['currentUser'] ?>" class="header-button">
                     <p class="navigation-text">settings</p>
                     </a>
                 </div>

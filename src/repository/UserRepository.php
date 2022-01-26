@@ -66,6 +66,23 @@ class UserRepository extends Repository
         );
     }
 
+    public function getUserAccountType(int $userId){
+        $stmt = $this->database->connect()->prepare('
+            SELECT user_type FROM users WHERE id = :userId');
+        $stmt->bindParam(':userId',$userId, PDO::PARAM_INT);
+        $stmt->execute();
+        $data=$stmt->fetch(PDO::FETCH_ASSOC);
+        return $data['user_type'];
+    }
+
+    public function isUserAdmin(int $userId): bool
+    {
+        $accountType = $this->getUserAccountType($userId);
+        if($accountType==2){
+            return true;
+        }
+        return false;
+    }
     public function setCookieUser(string $email)
     {
         $user = $this->getUser($email);
