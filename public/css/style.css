@@ -198,6 +198,9 @@ option{
 /* START OF BOOK INFO PAGE */
 
 .book-info-bg{
+    display: flex;
+    justify-content: center;
+    align-content: center;
     height: 45vh;
     background: transparent linear-gradient(180deg, #EED6C4 0%, #6B4F4FD4 100%) 0% 0% no-repeat padding-box;
     width: 100vw;
@@ -277,3 +280,20 @@ form.register {
     border: 1px solid #707070;
     border-radius: 33px;
 }
+
+/* END OF REGISTER PAGE */
+/* START OF SETTINGS PAGE */
+.Settings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 50vw;
+
+}
+.Settings>a{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+

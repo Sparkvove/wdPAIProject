@@ -21,24 +21,22 @@ if (!isset($_COOKIE['currentUser']))
         <?php include('header.php')?>
         
        <main>
-
+           <div class="Settings">
            <?php
 
            if ($user->getId()==$_COOKIE['currentUser'] && $isAdmin)
            {
                echo "
             <a href='http://localhost:8080/addBook/{$user->getId()}'>
-            <p>add book</p>
+            <button class='button-login'>add book</button>
             </a>";
            }
            ?>
 
-
-
-
            <a href='http://localhost:8080/logout'>
-               <p>Log out</p>
+               <button class='button-login'>Log out</button>
            </a>
+            </div>
        </main>
     </div>
 
