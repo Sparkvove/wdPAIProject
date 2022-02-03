@@ -18,7 +18,6 @@ class DefaultController extends AppController{
     }
 
 
-
     public function list(){
         $this->render('list');
     }
