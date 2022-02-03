@@ -32,11 +32,9 @@ Aplikacja Librarian to twoja wirtualna biblioteka!.Pozwala ona na przeglądanie 
 - w przyszłości edytowanie informacji dot. ksiażek
 - 
 ## Przykładowe widoki:  ##
-
+![](public/ScreenShots/dashboard.png)
+![](public/ScreenShots/search.png)
 ![](public/ScreenShots/book-info.png)
-![]()
-![]()
-
 ## Pełna lista widoków: ##
 - strona logowania
 - strona rejestracji
