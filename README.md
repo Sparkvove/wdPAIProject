@@ -33,7 +33,7 @@ Aplikacja Librarian to twoja wirtualna biblioteka!.Pozwala ona na przeglądanie 
 - 
 ## Przykładowe widoki:  ##
 
-![]()
+![](public/ScreenShots/book-info.png)
 ![]()
 ![]()
 
